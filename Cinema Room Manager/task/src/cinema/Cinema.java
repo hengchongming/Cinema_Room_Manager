@@ -106,14 +106,14 @@ public class Cinema {
 
         double percentPurchased = (double) purchasedTickets / totalTickets;
 
-        int currentIncome = 0;
+        int currentIncome;
         if (isSmallCinema) {
             currentIncome = frontRowTickets * TICKET_SMALL + backRowTickets * TICKET_SMALL;
         } else {
             currentIncome = frontRowTickets * TICKET_LARGE_FRONT + backRowTickets * TICKET_LARGE_BACK;
         }
 
-        int totalIncome = 0;
+        int totalIncome;
         if (isSmallCinema) {
             totalIncome = totalRow * totalSeatsPerRow * TICKET_SMALL;
         } else {
@@ -134,7 +134,7 @@ public class Cinema {
             return -1;
         }
 
-        int seatPrice = 0;
+        int seatPrice;
         int totalSeats = cinemaSeats.length * cinemaSeats[0].length;
         if (totalSeats <= 60) {
             seatPrice = TICKET_SMALL;
